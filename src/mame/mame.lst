@@ -39740,6 +39740,10 @@ spool99b                        // (c) 1998 Electronic Projects
 spool99c                        // (c) 1998 Electronic Projects
 vcarn                           // (c) 1999 Electronic Projects
 
+@source:sprachmg.cpp
+sprachmg
+sprachmg2
+
 @source:sprcros2.cpp
 sprcros2                        // (c) 1986 GM Shoji
 sprcros2a                       // (c) 1986 GM Shoji
