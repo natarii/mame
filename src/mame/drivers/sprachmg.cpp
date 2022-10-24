@@ -13,7 +13,7 @@
 //clock is wrong, board pics show 9832.0
 //cpu eprom label Bu01 8/87
 //32620 8251 uart, 32620.2 UB8560 = Z80 SIO
-//update rom checksums to include SP, also now that german has been redumped (and confirmed bad dump on the first batch)
+//update rom checksums to include SP
 #include "includes/sprachmg.h"
 
 
@@ -252,12 +252,22 @@ ROM_START( sprachmg2 )
 
 	//todo turn into SOFTWARE_LIST?
 	ROM_REGION( 0xC000, "cart", ROMREGION_ERASEFF )
-	ROM_LOAD("2620_8401-1.bin", 0x0000, 0x2000, CRC(2e475ce7) SHA1(efd3da128f515e479547c9e4f4bb107dde8ea52d) BAD_DUMP)
+
+	//original dump, either bad dump or damaged roms. first three have the first byte erroneously set to 0x00, seems to be a different set overall
+	/*ROM_LOAD("2620_8401-1.bin", 0x0000, 0x2000, CRC(2e475ce7) SHA1(efd3da128f515e479547c9e4f4bb107dde8ea52d) BAD_DUMP)
 	ROM_LOAD("2620_8401-2.bin", 0x2000, 0x2000, CRC(675ea7c8) SHA1(a74cd99f8be98b85d356ae0c3c5c794d740a7445) BAD_DUMP)
 	ROM_LOAD("2620_8401-3.bin", 0x4000, 0x2000, CRC(9d474786) SHA1(f05e232c04de34aceaa63fe26a2d5dfb4c5a163a) BAD_DUMP)
 	ROM_LOAD("2620_8401-4.bin", 0x6000, 0x2000, CRC(7f02ff72) SHA1(e4d7db906a08d89602fd093b7a037a270e567536))
 	ROM_LOAD("2620_8401-5.bin", 0x8000, 0x2000, CRC(f20c8633) SHA1(eebd61bab47d54e7688cdac287ceb1a110d46af7))
-	ROM_LOAD("2620_8401-6.bin", 0xA000, 0x2000, CRC(69a2d785) SHA1(2c547b583dcc16208f0422e121cd482c3356528d))
+	ROM_LOAD("2620_8401-6.bin", 0xA000, 0x2000, CRC(69a2d785) SHA1(2c547b583dcc16208f0422e121cd482c3356528d))*/
+
+	//redumped set
+	ROM_LOAD("2620_8401-1.bin", 0x0000, 0x2000, CRC(05f58420) SHA1(d7a81e337b1f97b861d1f39569d8b236266d1335))
+	ROM_LOAD("2620_8401-2.bin", 0x2000, 0x2000, CRC(df8b0bb9) SHA1(fe69b905819f95bfd17fdf41f8a1a68e0848c624))
+	ROM_LOAD("2620_8401-3.bin", 0x4000, 0x2000, CRC(13554a48) SHA1(04dec28efac7b974787db0d7b05df6cf364d9bb4))
+	ROM_LOAD("2620_8401-4.bin", 0x6000, 0x2000, CRC(a41bc709) SHA1(c054653c41ae1c3b0fd07cba07c5a8566ff63a7c))
+	ROM_LOAD("2620_8401-5.bin", 0x8000, 0x2000, CRC(739c3547) SHA1(5fcaab9ede8c9366f689ceeb763c862d2110d3c9))
+	ROM_LOAD("2620_8401-6.bin", 0xA000, 0x2000, CRC(549b5994) SHA1(6ab046dd14e12237615a90cac9cadd09cddd0f24))
 ROM_END
 
 /*    YEAR  NAME    PARENT  COMPAT  MACHINE INPUT   CLASS         INIT        COMPANY                   FULLNAME                                      FLAGS */
