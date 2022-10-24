@@ -233,10 +233,10 @@ void sprachmg_state::sprachmg2(machine_config &config) {
 
 ROM_START( sprachmg )
 	ROM_REGION( 0x1000, "mainrom", ROMREGION_ERASEFF )
-	ROM_LOAD( "cpu.bin", 0x0000, 0x1000, NO_DUMP )
+	ROM_LOAD( "32620_cpu.bin", 0x0000, 0x1000, NO_DUMP )
 
 	ROM_REGION( 0x2000, "expansionrom", ROMREGION_ERASEFF )
-	ROM_LOAD( "dbe.bin", 0x0000, 0x2000, NO_DUMP )
+	ROM_LOAD( "32620_dbe.bin", 0x0000, 0x2000, NO_DUMP )
 
 	ROM_REGION( 0x0800, "charrom", ROMREGION_ERASEFF )
 	ROM_LOAD( "32620_display.bin", 0x0000, 0x0800, CRC(9ffd1e15) SHA1(759660404dfe479d13a1bdd4beb19e6035a34e17) ) //not confirmed, sprachmg2 was what was dumped, *probably* the same on sprachmg
@@ -245,7 +245,7 @@ ROM_END
 
 ROM_START( sprachmg2 )
 	ROM_REGION( 0x2000, "mainrom", ROMREGION_ERASEFF )
-	ROM_LOAD( "32620-2-cpu.bin", 0x0000, 0x2000, CRC(7d9a92a6) SHA1(c9ca4a0d118b2c30e2505de051671769ad08a1c5) )
+	ROM_LOAD( "32620_2_cpu.bin", 0x0000, 0x2000, CRC(7d9a92a6) SHA1(c9ca4a0d118b2c30e2505de051671769ad08a1c5) )
 
 	ROM_REGION( 0x0800, "charrom", ROMREGION_ERASEFF )
 	ROM_LOAD( "32620_display.bin", 0x0000, 0x0800, CRC(9ffd1e15) SHA1(759660404dfe479d13a1bdd4beb19e6035a34e17) )
